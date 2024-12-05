@@ -14,16 +14,16 @@ source=('sample_pkgbuild::git+https://github.com/ngoanhthang/sample_pkgbuild.git
 sha512sums=('SKIP')
 
 build() {
-  cd $srcdir
+  cd $srcdir/sample_pkgbuild
   make build
 }
 
 package() {
-  cd $srcdirbuild
+  cd $srcdir/sample_pkgbuild
   make DESTDIR="$pkgdir" install
 }
 
 clean() {
-  cd $srcdir
+  cd $srcdir/sample_pkgbuild
   make clean
 }
