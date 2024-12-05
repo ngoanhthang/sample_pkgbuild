@@ -1,0 +1,5 @@
+build/
+tmp/
+src/
+pkg/
+*.pkg.*
