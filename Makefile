@@ -19,15 +19,15 @@ clean:
 
 
 
-	BUILDDIR = build
+# 	BUILDDIR = build
 
-all:
-build:
-	@mkdir -p $(BUILDDIR)/usr/bin
-	@cp main.sh $(BUILDDIR)/usr/bin/sample
-	@chmod +x $(BUILDDIR)/usr/bin/sample
-install:
-	@cp -r $(BUILDDIR)/* /install/path/
-clean:
-	@rm -rf $(BUILDDIR)
+# all:
+# build:
+# 	@mkdir -p $(BUILDDIR)/usr/bin
+# 	@cp main.sh $(BUILDDIR)/usr/bin/sample
+# 	@chmod +x $(BUILDDIR)/usr/bin/sample
+# install:
+# 	@cp -r $(BUILDDIR)/* /install/path/
+# clean:
+# 	@rm -rf $(BUILDDIR)
 	

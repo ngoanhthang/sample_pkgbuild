@@ -30,14 +30,14 @@ clean() {
 }
 
 
-pkgname=sh-number
-pkgver=1.0.1
-pkgrel=1
-arch=('any')
-license=('GPL')
-depends=('bash''shfmt')
-source=('main.sh' 'Makefile')
+# pkgname=sh-number
+# pkgver=1.0.1
+# pkgrel=1
+# arch=('any')
+# license=('GPL')
+# depends=('bash''shfmt')
+# source=('main.sh' 'Makefile')
 
-package() {
-  make prefix="$pkgdir/usr/" install
-}
+# package() {
+#   make prefix="$pkgdir/usr/" install
+# }
