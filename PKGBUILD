@@ -6,38 +6,24 @@ pkgver=1.0.1
 pkgrel=1
 pkgdesc="Nhap vao so"
 arch=('any')
-url=
+url=https://github.com/ngoanhthang/sample_pkgbuild.git
 license=('GPL')
 depends=('bash')
-makedepends=('shfmt')
-source=('main.sh' 'Makefile')
-sha512sums=('SKIP' 'SKIP')
-
-prepare() {
-  :
-}
+makedepends=( 'shfmt')
+source=('sample_pkgbuild::git+https://github.com/ngoanhthang/sample_pkgbuild.git#branch=main')
+sha512sums=('SKIP')
 
 build() {
+  cd $srcdir
   make build
 }
 
 package() {
+  cd $srcdirbuild
   make DESTDIR="$pkgdir" install
 }
 
 clean() {
+  cd $srcdir
   make clean
-}
-
-
-pkgname=sh-number
-pkgver=1.0.1
-pkgrel=1
-arch=('any')
-license=('GPL')
-depends=('bash''shfmt')
-source=('main.sh' 'Makefile')
-
-package() {
-  make prefix="$pkgdir/usr/" install
 }
